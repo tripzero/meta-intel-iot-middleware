@@ -5,7 +5,7 @@ SECTION = "console/network"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=62ddc846179e908dc0c8efec4a42ef20"
 
-DEPENDS = "openssl util-linux python"
+DEPENDS = "openssl util-linux python c-ares"
 
 PR = "r0"
 
@@ -16,8 +16,8 @@ SRC_URI = "http://mosquitto.org/files/source/mosquitto-${PV}.tar.gz \
 
 export LIB_SUFFIX="${@d.getVar('baselib', True).replace('lib', '')}"
 
-SRC_URI[md5sum] = "cd879f5964311501ba8e2275add71484"
-SRC_URI[sha256sum] = "591f3adcb6ed92c01f7ace1c878af728b797fe836892535620aa6106f42dbcc6"
+SRC_URI[md5sum] = "d859cd474ffa61a6197bdabe007b9027"
+SRC_URI[sha256sum] = "d96eb5610e57cc3e273f4527d3f54358ab7711459941a9e64bc4d0a85c2acfda"
 
 do_compile() {
     oe_runmake PREFIX=/usr
